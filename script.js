@@ -1,6 +1,6 @@
-var wins = 0;
-var losses = 0;
-var ties = 0;
+var wins = "";
+var losses = "";
+var ties = "";
 
 var userChoice = prompt("please choose R,P,S");
 var options = ["R", "P", "S"];
