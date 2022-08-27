@@ -35,4 +35,10 @@ var startGame = function () {
   window.alert(
     "Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
   );
+
+  var playAgain = window.confirm("Play Again?");
+
+  if (playAgain) {
+    startGame();
+  }
 };
