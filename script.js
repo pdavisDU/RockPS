@@ -16,9 +16,17 @@ var startGame = function() {
     var randomIndex = Math.floor(Math.random() * options.length);
     var computerChoice = options[randomIndex];
 
-    window.alert('Computer chose ' + computerChoice) {
-        
-    }
+    window.alert('Computer chose ' + computerChoice)
 
+    if (userChoice === computerChoice) {
+        ties++;
+        window.alert('Its a tie');
+
+    } else if (
+        (userChoice === 'R' && computerChoice === 'S') ||
+        (userChoice === 'P' && computerChoice === 'R') ||
+        (userChoice === 'S' && computerChoice === 'P')
+        ) {
+            wins++;
+            window.alert('You Win!');
 }
-console.log(userChoice);
