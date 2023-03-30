@@ -6,11 +6,11 @@ var options = ["R", "P", "S"];
 
 var startGame = function () {
   var userChoice = prompt("please choose R,P,S");
-  if (!userChoice) {
-    return;
-  }
-
   userChoice = userChoice.toUpperCase();
+  if (userChoice != "R" && userChoice != "P" && userChoice != "S") {
+    window.alert("Please choose from R,P, or S");
+    startGame();
+  }
 
   var randomIndex = Math.floor(Math.random() * options.length);
   var computerChoice = options[randomIndex];
